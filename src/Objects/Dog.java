@@ -2,8 +2,8 @@ package Objects;
 
 public class Dog {
 
-    String name;
-    String color;                     //instance variables
+   String name;
+   String color;                     //instance variables
     int age;
   static   int meal=20;     //when its static its different
 

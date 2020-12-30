@@ -29,6 +29,15 @@ public class Math {
         return sum;
     }
 
+    public static int sumNum(int... numbers) {
+        int sum = 0;
+        for(int num: numbers) {
+            sum+=num;
+        }
+
+        return sum;
+    }
+
     public double rectangleArea(double length, double width) {
 
         double result = width*length;
