@@ -15,6 +15,9 @@ public class Phone {
         Phone two = new Phone("Iphone");
         Phone three=one;
         one=two;
-        
+        System.out.println(one.equals(two)); //one and two pointing the same object --> "true"
+        System.out.println(two.equals(three));  //false
+        System.out.println(one == two);  //true
+        System.out.println(two == three); //false
     }
 }
