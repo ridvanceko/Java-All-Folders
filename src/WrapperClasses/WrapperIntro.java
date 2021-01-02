@@ -33,7 +33,12 @@ public class WrapperIntro {
         Double db1 = 56d;
 
 
-        System.out.println(num==num1);
-        System.out.println(num.equals(num1));
+        System.out.println(num==num1); //false --> since the references are not pointing the same object
+        System.out.println(num.equals(num1)); // true --> since num and num1 has the same value
+
+        //if the equals method is coming from the object class it will compare the
+        //references are pointing to same object or not
+        //if the equals method is coming from the Wrapper class,
+        //it will compare the values of the object
     }
 }
