@@ -11,7 +11,7 @@ public class CarTest {
         //how many object I have inside this class? --> 2
         //NOTE: If the object have no reference, java will garbage collect those references
         // and remove from the memory
-        
+
         //how many object is garbage collected? --> 1
     }
 }
