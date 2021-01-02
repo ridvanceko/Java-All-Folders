@@ -20,5 +20,12 @@ public class StringToWrapper {
         boolean bl = Boolean.parseBoolean("123");
         System.out.println(bl);
 
+
+        Integer number = null;
+        int number1 = number;  //run time error
+        // int number2 = null;  //compile time error
+
+        System.out.println(number1);
+
     }
 }
