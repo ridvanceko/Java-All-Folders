@@ -26,6 +26,18 @@ public class Methods2 {
 
          animals.clear(); // --> it will delete all the methods from ArrayList
         System.out.println(animals.isEmpty());  // true
+       // System.out.println(animals);
+
+
+        ArrayList<String> animals1 = new ArrayList<>();
+        animals1.add("Dog");
+        animals1.add("Cat");
+        //System.out.println(animals1);
+
+        System.out.println("Result is: " +animals.equals(animals1));
+
+        //it will return false because previously we clear() everything so there is nothing to compare
+        //note: it has to be the same order and the same value
 
 
 
