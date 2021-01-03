@@ -20,6 +20,8 @@ public class Computer {
         System.out.println(comp.name);
         System.out.println(comp == comp1);  //--> false
         System.out.println(comp.equals(comp1));  // --> true
+
+
     }
 
 }
