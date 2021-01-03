@@ -21,11 +21,12 @@ public class StringToWrapper {
         System.out.println(bl);
 
 
-        Integer number = null;
-        int number1 = number;  //run time error
-        // int number2 = null;  //compile time error
 
-        System.out.println(number1);
+//        Integer number = null;
+//        int number1 = number;  //run time error
+//        // int number2 = null;  //compile time error
+//
+//        System.out.println(number1);
 
     }
 }
