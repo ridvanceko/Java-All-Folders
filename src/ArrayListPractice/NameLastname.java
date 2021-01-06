@@ -1,4 +1,5 @@
 package ArrayListPractice;
+
 import java.util.ArrayList;
 public class NameLastname {
     public static void main(String[] args) {
@@ -18,7 +19,7 @@ public class NameLastname {
         studentLastname.add("Gomez");
 
         for (int i = 0; i < studentName.size(); i++) {
-            
+
             for (int j = 0; j < studentName.size(); j++) {
                 if(studentName.get(i).charAt(0)<studentName.get(j).charAt(0)){
 
