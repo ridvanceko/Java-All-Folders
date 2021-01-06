@@ -24,6 +24,10 @@ public class Methods {
         cities.add("New York");
         cities.add("Chicago");
         cities.add("Denver");
+        cities.add("LA");
+        System.out.println(cities);
+
+        ArrayListIntro.print(cities); //ask this Renas??
 
         cities.remove("Chicago");
         cities.remove(3);
