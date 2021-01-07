@@ -10,9 +10,9 @@ public class ArrayListPractice1 {
         list.add(3);
       //  list.add("Some Text");
 
-        for(Integer item: list) {
-            list.add(list.get(0) );
-        }
+//        for(Integer item: list) {
+//            list.add(list.get(0) );
+//        }
 
         System.out.println(list);
 
