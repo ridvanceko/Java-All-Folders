@@ -1,149 +1,94 @@
 package map;
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 public class Demographics {
     public static void main(String[] args) {
 
-        // 1.find all people from chicago
-        // 2.find all males under age 19
-        //if you have ArrayList<String>
-        //for(String item: list) {
-        //}
+        ArrayList<HashMap<String, String>> people=new ArrayList<HashMap<String, String>>();
 
-
-        ArrayList<HashMap<String, String>> people = new ArrayList();
-
-        HashMap<String, String> person1 = new HashMap<>();
-        person1.put("FirstName", "Checky");
-        person1.put("LastName", "Cheko");
-        person1.put("Age", "22");
-        person1.put("Gender", "Male");
-        person1.put("City", "Chicago");
-        people.add(person1);
-
-        // people.get().get("Chicago") --> first get() for arrayList second get() for HashMap
-
-
-        HashMap<String, String> person2 = new HashMap<>();
-        person2.put("FirstName", "Kumar");
-        person2.put("LastName", "Patel");
-        person2.put("Age", "40");
-        person2.put("Gender", "Male");
-        person2.put("City", "Schaumburg");
-        people.add(person2);
-
-
-        HashMap<String, String> person3 = new HashMap<>();
-        person3.put("FirstName", "Michael");
-        person3.put("LastName", "Tushar");
-        person3.put("Age", "22");
-        person3.put("Gender", "Male");
-        person3.put("City", "Skokie");
-        people.add(person3);
-
-        HashMap<String, String> person4 = new HashMap<>();
-        person4.put("FirstName", "Prianka");
-        person4.put("LastName", "Khan");
-        person1.put("Age", "22");
-        person4.put("Gender", "Female");
-        person4.put("City", "Des Plaines");
-        people.add(person4);
-
-
-        HashMap<String, String> person5 = new HashMap<>();
-        person5.put("FirstName", "Arti");
-        person5.put("LastName", "Puri");
-        person5.put("Age", "40");
-        person5.put("Gender", "Male");
-        person5.put("City", "Arlington Heights");
-        people.add(person5);
-
-
+        HashMap<String, String> person1=new HashMap<>();
+        HashMap<String, String> person2=new HashMap<>();
+        HashMap<String, String> person3=new HashMap<>();
+        HashMap<String, String> person4=new HashMap<>();
+        HashMap<String, String> person5=new HashMap<>();
         HashMap<String, String> person6 = new HashMap<>();
-        person6.put("FirstName", "Ceko");
-        person6.put("LastName", "Cekmez");
-        person6.put("Age", "9");
-        person6.put("Gender", "Male");
-        person6.put("City", "Chicago");
-        people.add(person6);
-
         HashMap<String, String> person7 = new HashMap<>();
-        person7.put("FirstName", "Jenna");
-        person7.put("LastName", "Cekmez");
-        person7.put("Age", "36");
-        person7.put("Gender", "Female");
-        person7.put("City", "Chicago");
-        people.add(person7);
-
         HashMap<String, String> person8 = new HashMap<>();
-        person8.put("FirstName", "Miley");
-        person8.put("LastName", "Cekmez");
-        person8.put("Age", "7");
-        person8.put("Gender", "Female");
-        person8.put("City", "Las Vegas");
-        people.add(person8);
-
         HashMap<String, String> person9 = new HashMap<>();
-        person9.put("FirstName", "Ridvan");
-        person9.put("LastName", "Cekmez");
-        person9.put("Age", "29");
-        person9.put("Gender", "Male");
-        person9.put("City", "Tucson");
-        people.add(person9);
-
         HashMap<String, String> person10 = new HashMap<>();
-        person10.put("FirstName", "Dublin");
-        person10.put("LastName", "Ireland");
-        person10.put("Age", "8");
-        person10.put("Gender", "Male");
-        person10.put("City", "Tucson");
-        people.add(person10);
 
+        person1.put("FirstName", "Sandeep"); person1.put("LastName", "Tushar");
+        person1.put("Age", "22"); person1.put("Gender", "Male"); person1.put("City", "Chicago");
+        person1.put("TempDay1", "100"); person1.put("TempDay2", "97"); person1.put("TempDay3", "100");
         people.add(person1);
+        person2.put("FirstName", "Kumar"); person2.put("LastName", "Patel");
+        person2.put("Age", "40"); person2.put("Gender", "Male"); person2.put("City", "Schaumburg");
+        person2.put("TempDay1", "100"); person2.put("TempDay2", "100"); person2.put("TempDay3", "102");
         people.add(person2);
+        person3.put("FirstName", "Michael"); person3.put("LastName", "Tushar");
+        person3.put("Age", "22"); person3.put("Gender", "Male"); person3.put("City", "Skokie");
+        person3.put("TempDay1", "97"); person3.put("TempDay2", "100"); person3.put("TempDay3", "102");
         people.add(person3);
+        person4.put("FirstName", "Priyanka"); person4.put("LastName", "Khan");
+        person4.put("Age", "22"); person4.put("Gender", "Female"); person4.put("City", "Des Plaines");
+        person4.put("TempDay1", "96"); person4.put("TempDay2", "98"); person4.put("TempDay3", "100");
         people.add(person4);
+        person5.put("FirstName", "Arti"); person5.put("LastName", "Puri");
+        person5.put("Age", "22"); person5.put("Gender", "Female"); person5.put("City", "Arlington Heights");
+        person5.put("TempDay1", "96"); person5.put("TempDay2", "100"); person5.put("TempDay3", "101");
         people.add(person5);
+
+        /*person6.put("FirstName", "Nandi"); person6.put("LastName", "Puri");
+        person6.put("Age", "18"); person6.put("Gender", "Female");
+        person6.put("City", "Chicago");
+        person6.put("Temp", "100");
+        people.add(person6);
+        person7.put("FirstName", "Rami"); person7.put("LastName", "Khan");
+        person7.put("Age", "18"); person7.put("Gender", "Male");
+        person7.put("City", "Winnetka");
+        person7.put("Temp", "100");
         people.add(person7);
+        person8.put("FirstName", "Anish"); person8.put("LastName", "Ray");
+        person8.put("Age", "7"); person8.put("Gender", "Male");
+        person8.put("City", "Winnetka");
+        person8.put("Temp", "100");
         people.add(person8);
+        person9.put("FirstName", "Janew"); person9.put("LastName", "Jason");
+        person9.put("Age", "45"); person9.put("Gender", "Male");
+        person9.put("City", "New York");
+        person9.put("Temp", "100");
         people.add(person9);
-        people.add(person10);
+        person10.put("FirstName", "Binita"); person10.put("LastName", "Jason");
+        person10.put("Age", "22"); person10.put("Gender", "Female");
+        person10.put("City", "New York");
+        person10.put("Temp", "100");
+        people.add(person10);*/
 
-        //  System.out.println(people);
-
-        System.out.println("All people from Chicago");
-        for (HashMap<String, String> person : people) {
-            if (person.get("City").equalsIgnoreCase("chicago")) {
-
-                System.out.println(person.get("FirstName") + " " + person.get("LastName"));
+        for (HashMap<String,String> person:people) {
+            if(person.get("City").equals("Chicago")){
+                //System.out.println(person.get("FirstName")+" "+person.get("LastName"));
             }
         }
-
-        System.out.println("All males under age 19: ");
-        for (HashMap<String, String> person : people) {
-            if (Integer.parseInt(person.get("Age")) < 19 && person.get("Gender").equalsIgnoreCase("male")) {
-
-                System.out.println(person.get("FirstName") + " " + person.get("LastName"));
+        for (HashMap<String,String> person:people) {
+            if(Integer.parseInt(person.get("Age")) <19 && person.get("Gender").equalsIgnoreCase("Male")){
+                System.out.println(person.get("FirstName")+" "+person.get("LastName"));
             }
         }
-
-        System.out.println(people);
-        System.out.println("Add 1 year for each person age: ");
-        for(HashMap<String, String> person: people) {
-           // Integer.parseInt(person.get("Age")); //current age
-         //   Integer.parseInt(person.get("Age")) + 1; //updated age
-
-           int age =  Integer.parseInt(person.get("Age")) + 1;
-           person.put("Age", String.valueOf(age));
-
-           // person.put("Age", String.valueOf( Integer.parseInt(person.get("Age")) + 1)); the same result
-
+        for (HashMap<String,String> person:people) {
+            int age=Integer.parseInt(person.get("Age"))+1;
+            person.put("Age", String.valueOf(age));
         }
         System.out.println(people);
-
-
+        for (HashMap<String,String> person:people) {
+            if(Double.parseDouble(person.get("TempDay1")) >=100 && Double.parseDouble(person.get("TempDay2")) >=100
+                    && Double.parseDouble(person.get("TempDay3")) >=100){
+                System.out.println(person.get("FirstName")+" "+person.get("LastName"));
+            }
+        }
     }
 }
+
 
 
 
