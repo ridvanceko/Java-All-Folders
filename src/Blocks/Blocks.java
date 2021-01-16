@@ -6,7 +6,7 @@ public class Blocks {
     static  {
         System.out.println("Static Block");
     }
-    
+
     {
         System.out.println("Instance Block");
     }
