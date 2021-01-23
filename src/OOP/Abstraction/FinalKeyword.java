@@ -10,8 +10,10 @@ public final class FinalKeyword extends Book {
     public FinalKeyword(String name, int page, double price) {
         super(name, page, price);
     }
-
-    public final void printCity() {
-        System.out.println(city);
-    }
+//
+//    public final void printCity() {
+//        System.out.println(city);
+//    }
+    // printCity is final method inside the book class
+    // that's why we can not override the printCity
 }
