@@ -22,4 +22,10 @@ public class Book {
     public void getDetails() {
         System.out.println(name + " book has " + getPage()+ " number of page");
     }
+
+//    public final void printCity() {
+//        System.out.println(city);
+//    }
+
 }
+
