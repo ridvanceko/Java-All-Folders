@@ -37,10 +37,12 @@ public class Car extends Vehicle {
     public static void main(String[] args) {
         Vehicle vehicle = new Vehicle("Corolla", "Toyota", 2018);
         vehicle.accelerate();
+        System.out.println(vehicle.model);
 
         Car car = new Car("Accord", "Honda", 2012);
         car.accelerate();
         System.out.println(car.model);
+//        System.out.println(super.model); super can not work with static
     }
 
 
