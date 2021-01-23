@@ -1,5 +1,7 @@
 package OOP.Abstraction.Abstract.Shape;
 
+import com.sun.security.jgss.GSSUtil;
+
 public class Calculator {
 
     public static void main(String[] args) {
@@ -8,5 +10,11 @@ public class Calculator {
 
         System.out.println(rc.getArea());
         System.out.println(rc.getPerimeter());
+
+        Triangle tr = new Triangle("Triangle", 3, 4, 5, 3);
+
+        tr.draw();
+        System.out.println(tr.getArea());
+        System.out.println(tr.getPerimeter());
     }
 }
