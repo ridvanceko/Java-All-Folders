@@ -35,5 +35,6 @@ public class OCA extends Book{
         System.out.println(oca.name);
         oca.getDetails();
         oca.getOCABookDetails();
+        oca.getBookDetails(); // --> it calls the super
     }
 }
