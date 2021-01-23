@@ -23,8 +23,9 @@ public class Vehicle {
     Object accelerate() {
 
         //Object  [] values={"Test", 12, 1.2, true};
+        System.out.println("Model of the car");
 
-       return new Object();  //I can say String as well.
+       return new String();  //I can say String as well.
     }
 
     public Vehicle(String model, String brand, int year) {
