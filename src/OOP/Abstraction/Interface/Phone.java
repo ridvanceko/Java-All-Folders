@@ -14,7 +14,7 @@ public abstract class Phone implements MemoryCard, TouchScreen{
     // Play is available inside MemoryCard. Since both of them are static method.
     // It is not overriding. It is hiding the method.
     public static void play() {
-        System.out.println("Phone is playing");
+        System.out.println("Phone class is playing");
     }
 
 
