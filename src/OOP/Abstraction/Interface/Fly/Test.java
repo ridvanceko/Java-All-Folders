@@ -6,7 +6,7 @@ public class Test {
 
         Plane plane = new Plane();
 
-        plane.getPassengerNumber();
+        System.out.println(plane.getPassengerNumber());
 
 
         Bird bird = new Bird();

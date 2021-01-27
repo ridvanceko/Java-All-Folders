@@ -9,9 +9,14 @@ public class Bird implements Flyable{
 
     }
 
-    @Override
-    public void makeNoise() {
-        System.out.println("Bird is chirping");
+//    @Override
+//    public void makeNoise() {
+//        System.out.println("Bird is chirping");
+//
+//    }
 
+    @Override
+    public void run() {
+        System.out.println("Bird is running");
     }
 }
