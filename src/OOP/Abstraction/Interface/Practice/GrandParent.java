@@ -6,4 +6,8 @@ public class GrandParent {
         System.out.println("talking");
 
     }
+
+    public int getAge() {
+        return 65;
+    }
 }

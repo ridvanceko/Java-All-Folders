@@ -14,7 +14,8 @@ public class Child extends GrandParent implements Parent {
         System.out.println("Child is moving");
     }
 
-    public void start() {
+    public void start() { //after we change static
+        // PolyPractice phone.start(); will work
      talk();
     }
 

@@ -1,6 +1,6 @@
 package OOP.Abstraction.Interface;
 
-public abstract class Phone implements MemoryCard, TouchScreen{
+public abstract class Phone extends Object implements MemoryCard, TouchScreen {
     String name;
     int screenSize;
 
