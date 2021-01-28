@@ -1,6 +1,6 @@
 package OOP.Polymorphism.Foods;
 
-public abstract class Vegetable implements Food {
+public abstract class Vegetable extends WholeFood implements Food {
 
     public int getPrice() {
         return 2;
