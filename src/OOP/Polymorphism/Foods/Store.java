@@ -19,8 +19,23 @@ public class Store {
         // we can cast explicitly food to the Vegetable
         //Because food pointing to the Carrot. It is also down casting.
 
+        System.out.println(food instanceof Carrot);
+        System.out.println(food instanceof Vegetable);
+        System.out.println(food instanceof WholeFood);
+        System.out.println(food instanceof Food);
+
+
         Vegetable vegetable = (Vegetable)food;
         vegetable.getName();
+
+
+        // wholefood IS A RELATIONSHIP
+        WholeFood wholeFood = new WholeFood();
+
+        System.out.println(wholeFood instanceof Carrot);
+        //wholeFood cannot be instance of the Carrot
+        System.out.println(wholeFood instanceof Food);
+        System.out.println(wholeFood instanceof WholeFood);
 
     }
 }
