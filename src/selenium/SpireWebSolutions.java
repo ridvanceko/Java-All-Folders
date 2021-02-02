@@ -22,7 +22,7 @@ public class SpireWebSolutions {
 
       driver.findElement(By.xpath("//a[@href='href='/blog/what-is-marketing-automation.html']")).click();
 
-        //driver.navigate().back();
+        driver.navigate().back();
     }
 
 
