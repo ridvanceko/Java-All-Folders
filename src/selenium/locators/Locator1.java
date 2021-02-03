@@ -15,8 +15,8 @@ public class Locator1 {
 
     @Test
 
-    public void test1 () {
-        System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
+    public void test1() {
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.amazon.com");
         WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
@@ -30,8 +30,63 @@ public class Locator1 {
         String text = iphoneHeader.getText();
         System.out.println(text);
 
+        driver.close();
+
+    }
+
+    @Test
+
+    public void etsyTest() {
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://etsy.com");
+        WebElement search = driver.findElement(By.id("global-enhancements-search-query"));
+        search.sendKeys("Java book" + Keys.ENTER);
+
+        String currentURL = driver.getCurrentUrl();
+        System.out.println("current URL is " + currentURL);
 
 
     }
+
+    @Test
+    public void nameLocator() {
+
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://demo.guru99.com/test/newtours/");
+        WebElement firstNameField = driver.findElement(By.name("firstName"));
+        firstNameField.sendKeys("Ceko");
+
+    }
+
+    @Test
+    public void tagNameLocator() {
+
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/");
+        WebElement abTestLink = driver.findElement(By.xpath("//a[@href='/abtest']"));
+        abTestLink.click();
+
+        WebElement abTestHeader = driver.findElement(By.tagName("h3"));
+        System.out.println(abTestHeader);
+
+        String currentURL = driver.getCurrentUrl();
+        System.out.println("current URL is " + currentURL);
+
+    }
+
+    @Test
+    public void linkTextTest() {
+
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/");
+        WebElement abTestingLink = driver.findElement(By.linkText("A/B Testing"));
+        abTestingLink.click();
+
+    }
+
 
 }
