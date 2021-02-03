@@ -87,6 +87,51 @@ public class Locator1 {
         abTestingLink.click();
 
     }
+    @Test
+    public void linkTextTest1() {
 
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/");
+        String Title = driver.getTitle();
+        System.out.println("Home page's title is: " + Title);
+        String CurrentUrl = driver.getCurrentUrl();
+        System.out.println(CurrentUrl);
+
+        WebElement forgetPassword = driver.findElement(By.xpath("//a[@href='/forgot_password']"));
+        forgetPassword.click();
+        driver.navigate().back();
+
+        WebElement header = driver.findElement(By.tagName("h2"));
+        System.out.println(header);
+        driver.navigate().back();
+
+        WebElement hoversLink = driver.findElement(By.linkText("Hovers"));
+        hoversLink.click();
+
+
+        String currentURL = driver.getCurrentUrl();
+        System.out.println("current URL is " + currentURL);
+        driver.get("https://the-internet.herokuapp.com/");
+
+        String url = driver.getCurrentUrl();
+        if(url.equalsIgnoreCase(currentURL)){
+            System.out.println("Url is same");
+        }
+        else {
+            System.out.println("Url is different");
+        }
+
+    }
+
+    @Test
+    public void partialLinkTextTest() {
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/");
+        WebElement sliderLink = driver.findElement(By.partialLinkText("Slider"));
+        sliderLink.click();
+
+    }
 
 }
