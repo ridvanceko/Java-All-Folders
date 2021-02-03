@@ -15,15 +15,37 @@ public class SpireWebSolutions {
         WebDriver driver = new ChromeDriver();
         driver.get("https://spirewebsolutions.com/");
         driver.manage().window().maximize();
-       WebElement searchField = driver.findElement(By.xpath("//input[@name='q']"));
-       searchField.sendKeys("SEO" + Keys.ENTER);
-        String spireTitle = driver.getTitle();
-        System.out.println("Chrome browser result page name: " + spireTitle);
+        WebElement contactButton = driver.findElement(By.xpath("//a[@href='/contact.html']"));
+        contactButton.click();
+        WebElement nameholder = driver.findElement(By.id("name"));
+        nameholder.sendKeys("Ridvan Ceko");
+        nameholder.sendKeys(Keys.RETURN);
 
-      driver.findElement(By.xpath("//a[@href='href='/blog/what-is-marketing-automation.html']")).click();
+        WebElement emailholder = driver.findElement(By.id("email"));
+        emailholder.sendKeys("ridvanceko@gmail.com");
+        emailholder.sendKeys(Keys.RETURN);
 
-        driver.navigate().back();
+        WebElement subjectolder = driver.findElement(By.id("subject"));
+        subjectolder.sendKeys("I want to have a website");
+        subjectolder.sendKeys(Keys.RETURN);
+
+        WebElement messageholder = driver.findElement(By.id("message"));
+        messageholder.sendKeys("make me a website");
+        messageholder.sendKeys(Keys.RETURN);
+
+
+//       WebElement searchField = driver.findElement(By.xpath("//input[@name='q']"));
+//       searchField.sendKeys("SEO" + Keys.ENTER);
+//        String spireTitle = driver.getTitle();
+//        System.out.println("Chrome browser result page name: " + spireTitle);
+
+
+      //driver.findElement(By.xpath("//a[@href='href='/blog/what-is-marketing-automation.html']")).click();
+        //driver.navigate().back();
+
+
     }
+
 
 
 }
