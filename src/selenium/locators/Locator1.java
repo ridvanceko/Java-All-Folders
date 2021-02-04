@@ -87,6 +87,7 @@ public class Locator1 {
         abTestingLink.click();
 
     }
+
     @Test
     public void linkTextTest1() {
 
@@ -115,10 +116,9 @@ public class Locator1 {
         driver.get("https://the-internet.herokuapp.com/");
 
         String url = driver.getCurrentUrl();
-        if(url.equalsIgnoreCase(currentURL)){
+        if (url.equalsIgnoreCase(currentURL)) {
             System.out.println("Url is same");
-        }
-        else {
+        } else {
             System.out.println("Url is different");
         }
 
@@ -133,5 +133,19 @@ public class Locator1 {
         sliderLink.click();
 
     }
+
+    @Test
+    public void facebookTest() {
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.facebook.com/");
+        WebElement email = driver.findElement(By.name("email")).sendKeys("armaganaydingul@hotmail.com"));
+        WebElement login = driver.findElement(By.name("email"));
+        login.click();
+
+    }
+
+    
+
 
 }
