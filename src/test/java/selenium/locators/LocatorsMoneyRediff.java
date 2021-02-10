@@ -19,22 +19,37 @@ public class LocatorsMoneyRediff {
         WebDriver driver = new ChromeDriver();
         driver.get("https://money.rediff.com/gainers");
 
-        //self
+        //self  - Selects the current node
         String text = driver.findElement(By.xpath("//a[contains(text(),'Vinati Organics')]/self::a")).getText();
         //for getting text() I need assign as a String
         System.out.println(text); //Vinati Organics
 
-        //parent
+        //parent - Selects the parent of the current node (always one)
         String text1 = driver.findElement(By.xpath("//a[contains(text(),'Vinati Organics')]/parent::td")).getText();
         System.out.println(text1); //Vinati Organics
 
-        //child
+        //child - Selects all children of the current node (one or many)
       List<WebElement> childs =  driver.findElements(By.xpath("//a[contains(text(),'Vinati Organics')]/ancestor::tr/child::td"));
         System.out.println("Number of child elements: " + childs.size()); //5
 
-        //ancestor
+        //ancestor - Selects all ancestor (parent, grandparent, etc)
       text = driver.findElement(By.xpath("//a[contains(text(),'Vinati Organics')]/ancestor::tr")).getText();
         System.out.println(text);
 
+        //descendant - Select all escendants (children, grandchildren, etc.) of the current node
+      List <WebElement> descendants =  driver.findElements(By.xpath("//a[contains(text(),'Vinati Organics')]/ancestor::tr/descendant::*"));
+        System.out.println("Number of Descendant nodes: " + descendants.size());
+
+        //following - Selects everything in the document after the closing tag of the current node
+        List <WebElement> followingNodes =driver.findElements(By.xpath("//a[contains(text(),'Vinati Organics')]/ancestor::tr/following::tr"));
+        System.out.println("Number of following nodes: " + followingNodes.size());
+
+        //following-sibling = Selects all siblings after the current node
+        List <WebElement> followingSiblings = driver.findElements(By.xpath("//a[contains(text(),'Vinati Organics')]/ancestor::tr/following-sibling::tr"));
+
+        System.out.println("Following Siblings : " + followingNodes.size());
+
+
+        driver.close();
     }
 }
