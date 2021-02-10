@@ -17,6 +17,7 @@ public class WarmUp {
         String expectedURL = "https://www.google.com/";
         String expectedTitle = "Google";
 
+        System.out.println("Asserting the url");
         Assert.assertEquals(expectedURL, driver.getCurrentUrl());
         Assert.assertEquals(expectedTitle, driver.getTitle());
 
@@ -24,6 +25,7 @@ public class WarmUp {
         Assert.assertTrue(3>2);
 
         Assert.assertFalse(driver.getCurrentUrl().contains("facebook"));
+
 
     }
 }
