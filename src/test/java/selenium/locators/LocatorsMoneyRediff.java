@@ -49,6 +49,9 @@ public class LocatorsMoneyRediff {
 
         System.out.println("Following Siblings : " + followingNodes.size());
 
+        //preceding - Selects all nodes that appear before the current node in the document
+        List <WebElement> precedings = driver.findElements(By.xpath("//a[contains(text(),'Vinati Organics')]/ancestor::tr/preceding::tr"));
+        System.out.println("Number of preceding nodes: " + precedings.size());
 
         driver.close();
     }
