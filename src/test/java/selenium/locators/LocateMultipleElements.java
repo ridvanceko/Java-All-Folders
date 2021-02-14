@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import java.security.Key;
+import java.util.ArrayList;
 import java.util.List;
 
 public class LocateMultipleElements {
@@ -35,7 +36,7 @@ public class LocateMultipleElements {
        4- prices without $ sign
         */
 
-        int totalPrice=0;
+        double totalPrice = 0.0;
 
        for(WebElement elementPrice : prices) {
            //System.out.println(elementPrice.getText());
@@ -57,16 +58,47 @@ public class LocateMultipleElements {
               temp = temp.replace("\n", ".");
           }
 
-           System.out.println(temp);
-         //  totalPrice += Integer.parseInt(temp);
+           totalPrice += Double.parseDouble(temp);
        }
+        System.out.println(totalPrice);
 
 
     }
 
+    @Test
+    public void samsungTest() {
 
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
 
+        driver.get("https://www.amazon.com/");
+        WebElement searchBar = driver.findElement(By.id("twotabsearchtextbox"));
+        Actions actions = new Actions(driver);
+
+        actions.sendKeys(searchBar, "Samsung" + Keys.ENTER).perform();
+        List<WebElement> productNameList = driver.findElements(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']"));
+
+        List<String> productNames = new ArrayList<>();
+
+        for (WebElement product: productNameList) {
+            String temp = product.getText();
+            productNames.add(temp);
+        }
+        System.out.println(productNames);
+
+//        int index = 0;
+//        while(index < productNames.size()) {
+//            System.out.println();
+//        }
+    }
 
 
 
 }
+
+
+
+
+
+
+
