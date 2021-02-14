@@ -69,6 +69,9 @@ public class SelectDropDown {
         Select dropDownHandler = new Select(dropDown);
         dropDownHandler.selectByValue("search-alias=instant-video");
 
+        WebElement firstSelectedOption = dropDownHandler.getFirstSelectedOption();
+        Assert.assertEquals("Prime Video", firstSelectedOption.getText());
+
     }
 
 
