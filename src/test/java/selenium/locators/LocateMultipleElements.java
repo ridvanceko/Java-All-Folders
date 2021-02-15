@@ -1,6 +1,7 @@
 package test.java.selenium.locators;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -86,10 +87,14 @@ public class LocateMultipleElements {
         }
         System.out.println(productNames);
 
-//        int index = 0;
-//        while(index < productNames.size()) {
-//            System.out.println();
-//        }
+        int index = 0;
+        while(index < productNames.size()) {
+            System.out.println(index + ". " + productNames.get(index));
+
+            // making sure every element has SAMSUNG word
+            Assert.assertTrue(productNames.get(index).toLowerCase().contains("samsung"));
+            index++;
+        }
     }
 
 
