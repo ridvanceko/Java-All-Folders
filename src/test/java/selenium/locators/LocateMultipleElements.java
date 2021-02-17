@@ -85,7 +85,7 @@ public class LocateMultipleElements {
             String temp = product.getText();
             productNames.add(temp);
         }
-        System.out.println(productNames);
+        System.out.println(productNames); //getText()
 
         int index = 0;
         while(index < productNames.size()) {
