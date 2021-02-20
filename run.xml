@@ -2,8 +2,21 @@
 
 <suite name="Suite1" verbose="1" >
     <test name="Nopackage" >
+
+
+        <parameter name="username" value="cekoFromXml"></parameter>
+        <parameter name="password" value="ridvanFromXML"></parameter>
+
+
         <classes>
             <class name="test.java.selenium.testng.TestAnnotation" />
+            <class name="test.java.selenium.testng.TestNGIntro" />
+            <class name="test.java.selenium.testng.GoogleSearch" />
+            <class name="test.java.selenium.testng.SoftAssertion" />
+            <class name="test.java.selenium.testng.Parameterization" />
+
+            <class name="test.java.selenium.screenshots.ScreenshotIntro" />
+            <class name="test.java.selenium.screenshots.ScreenshotTask" />
 
 
 
