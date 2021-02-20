@@ -80,3 +80,23 @@ import java.util.Map;
     }
 
 
+//Pseudocode of the homework
+//Go to Amazon page
+//Locate the search field and send keys. Enter
+//Locate laptop elements (multiple elements, returns list of web element)
+//Create an empty String Array list
+//Add the texts of web elements inside the String array list by using a for each loop
+//Locate price elements (returns list of elements)p
+//Create an empty Integer Arraylist
+//Create a for loop for iterating price elements
+//  - first get text of each element, then eliminate commas and dollar signs.
+//  - Convert each text to the primitive int value and add them to the empty Integer Arraylist
+//Locate the next button at the bottom of the page to go to the 2nd page. Click on it
+//Sleep for 3 secs
+//Locate laptop elements again
+//Add them to the same String Arraylist we have(using for loop)
+//Locate price elements again
+//Create a for loop to iterate price elements and first get the texts then eliminate the commas and dollar signs. Then convert them to primitive data and add to the same Integer price Arraylist.
+//(now we have 2 array lists with that have the names of the laptops and prices of the laptops from the 2 pages)
+//Create a map <String, Integer>
+//Store names as keys and prices as values using for loop
