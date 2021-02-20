@@ -26,7 +26,7 @@ public class SoftAssertion {
         softAssert.assertEquals("Ashley", "John");
         System.out.println("code after soft assertion");
 
-        softAssert.assertAll();
+        softAssert.assertAll(); //getting result of all assertions
     }
 
 
