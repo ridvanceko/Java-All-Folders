@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [etsy test suite]">
+  <test thread-count="5" name="etsy search test(failed)">
+    <parameter name="searchCriteria" value="java programming mug"/>
+    <classes>
+      <class name="test.java.selenium.testng.EtsySearchJava">
+        <methods>
+          <include name="etsySearch" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- test.java.selenium.testng.EtsySearchJava -->
+    </classes>
+  </test> <!-- etsy search test(failed) -->
+</suite> <!-- Failed suite [etsy test suite] -->

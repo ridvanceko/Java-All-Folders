@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="dragdrop test suite">
+    <test name="dragdrap test">
+
+        <classes>
+            <class name="test.java.selenium.testng.homework5.DragAndDrop" />
+
+        </classes>
+    </test>
+</suite>
