@@ -5,7 +5,7 @@
         <parameter name="username" value="admin"></parameter>
         <parameter name="password" value="admin1234"></parameter>
         <classes>
-            <class name="test.java.selenium.testng.DataProvidersIntro"></class>
+            <class name="test.java.selenium.testng.DataProvidersIntro2"></class>
         </classes>
 
     </test>
