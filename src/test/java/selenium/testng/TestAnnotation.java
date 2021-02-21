@@ -59,4 +59,24 @@ public class TestAnnotation {
         Assert.assertTrue(driver.getCurrentUrl().contains("amazon"));
     }
 
+    @Test(invocationTimeOut = 5000)
+    public void test5() throws InterruptedException {
+        System.out.println("Test 5");
+
+        Thread.sleep(6000);
+    }
+
+
+    @Test(expectedExceptions = RuntimeException.class)
+    public void B_test6() {
+
+        System.out.println("test 6");
+
+    }
+
+    @Test(dependsOnMethods = "test6")
+    public void A_test7() {
+        System.out.println("Test 7");
+    }
+
 }

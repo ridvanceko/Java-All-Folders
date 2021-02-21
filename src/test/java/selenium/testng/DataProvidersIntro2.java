@@ -28,19 +28,19 @@ public class DataProvidersIntro2 {
 
     }
 
-    @Test
-    public void registerPatientTest() {
-        driver.get("https://demo.openmrs.org/openmrs/login.htm");
-        WebElement registerPatientButton = driver.findElement(By.id())
-
-    }
+//    @Test
+//    public void registerPatientTest() {
+//        driver.get("https://demo.openmrs.org/openmrs/login.htm");
+//        WebElement registerPatientButton = driver.findElement(By.id());
+//
+//    }
 
     private void login() {
         WebElement userName = driver.findElement(By.id("username"));
         WebElement password1 = driver.findElement(By.id("password"));
 
 
-      
+
 
     }
 
