@@ -36,8 +36,20 @@ public class DragAndDrop {
 
         dragAndDrop.perform();
 
+        String text = toString();
+        if(text.equals("You did great!")) {
+            System.out.println("PASS: File is dropped to target as expected");
+        }else {
+            System.out.println("FAIL: File couldn't be dropped to target as expected");
+        }
+        driver.close();
+    }
+
+
+
 
 
 
     }
-}
+
+
