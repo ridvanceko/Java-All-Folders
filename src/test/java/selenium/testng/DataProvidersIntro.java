@@ -18,16 +18,18 @@ public class DataProvidersIntro {
 
     }
 
-    @Parameters({"username", "password"})
+    @Parameters({"MRSusername", "MRSpassword"})
     @Test
     public void testData(String user, String password){
 
         driver.get("https://demo.openmrs.org/openmrs/login.htm");
-        WebElement userName = driver.findElement(By.id("username"));
-        userName.sendKeys(user);
+        WebElement userNameBox= driver.findElement(By.id("username"));
+        WebElement passwordBox = driver.findElement(By.id("password"));
+        userNameBox.sendKeys(user);
+        passwordBox.sendKeys(password);
 
-        WebElement password1 = driver.findElement(By.id("password"));
-        password1.sendKeys(password);
+        WebElement option = driver.findElement(By.id("Inpatient Ward"));
+        option.click();
 
         WebElement login = driver.findElement(By.id("loginButton"));
         login.click();

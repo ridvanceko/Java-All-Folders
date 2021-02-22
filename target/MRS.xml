@@ -2,8 +2,8 @@
 <suite name="MRS testing">
     <test name="MRS login test">
 
-        <parameter name="username" value="admin"></parameter>
-        <parameter name="password" value="admin1234"></parameter>
+        <parameter name="MRSusername" value="admin"></parameter>
+        <parameter name="MRSpassword" value="Admin123"></parameter>
         <classes>
             <class name="test.java.selenium.testng.DataProvidersIntro"></class>
         </classes>

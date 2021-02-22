@@ -68,7 +68,7 @@ public class DataProvidersIntro2 {
         WebElement phoneNumberBox = driver.findElement(By.name("phoneNumber"));
         phoneNumberBox.sendKeys(String.valueOf(phoneNumber));
         actions.click(nextButton).perform();
-        
+
         //relatives
         WebElement relativeDD = driver.findElement(By.id("relationship_type"));
         select = new Select(relativeDD);
