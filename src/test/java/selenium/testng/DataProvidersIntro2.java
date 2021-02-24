@@ -27,10 +27,12 @@ public class DataProvidersIntro2 {
         actions = new Actions(driver);
     }
     @Test(dataProvider = "patientInfo")
-    public void registerPatientTest(String firstName, String lastName, String gender, int birthDay, String birthMonth, int birthYear, String address, long phoneNumber, String relative) {
+    public void registerPatientTest(String firstName, String lastName, String gender, int birthDay,
+                                    String birthMonth, int birthYear, String address, long phoneNumber, String relative) {
         driver.get("https://demo.openmrs.org/");
         login();
-        WebElement registerPatientButton = driver.findElement(By.id("referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension"));
+        WebElement registerPatientButton = driver.findElement(By.id("referenceapplication-registrationapp-" +
+                "registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension"));
         actions.click(registerPatientButton).perform();
 
         //patient name
@@ -55,6 +57,7 @@ public class DataProvidersIntro2 {
         WebElement birthMonthBox = driver.findElement(By.id("birthdateMonth-field"));
         select = new Select(birthMonthBox);
         select.selectByVisibleText(birthMonth);
+
         WebElement birthYearBox = driver.findElement(By.id("birthdateYear-field"));
         birthYearBox.sendKeys(String.valueOf(birthYear));
         actions.click(nextButton).perform();
@@ -74,6 +77,7 @@ public class DataProvidersIntro2 {
         select = new Select(relativeDD);
         select.selectByVisibleText(relative);
         actions.click(nextButton).perform();
+        
         WebElement submitButton = driver.findElement(By.id("submit"));
         actions.click(submitButton).perform();
     }

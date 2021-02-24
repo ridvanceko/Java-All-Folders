@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<suite name="Register Patient">
-    <test name="New Patient">
+<suite name="Register 5 Patient">
+    <test name="5 new Patient">
 
         <parameter name="username" value="admin"></parameter>
         <parameter name="password" value="admin1234"></parameter>
         <classes>
-<!--            <class name="test.java.selenium.testng.DataProvidersIntro2"></class>-->
+           <class name="test.java.selenium.testng.DataProviderPatience"></class>
         </classes>
 
     </test>
