@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Windows Intro">
+    <test name="Window-Tab Intro">
+
+
+        <classes>
+            <class name="test.java.selenium.windows.WindowsIntro"></class>
+        </classes>
+
+    </test>
+
+
+</suite>
