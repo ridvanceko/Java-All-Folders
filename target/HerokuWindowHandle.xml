@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Heroku Windows Handler">
+    <test name="Windows Handler">
+
+
+        <classes>
+          <class name="test.java.selenium.testng.HerokuWindowsHandle"></class>
+        </classes>
+
+    </test>
+
+
+</suite>
