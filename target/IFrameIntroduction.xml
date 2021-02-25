@@ -4,7 +4,8 @@
 
 
         <classes>
-            <class name="test.java.selenium.iframes.IFrameIntro"></class>
+<!--            <class name="test.java.selenium.iframes.IFrameIntro"></class>D-->
+            <class name="test.java.selenium.iframes.NestedFrames"></class>D
         </classes>
 
     </test>
