@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Iframe Intro">
+    <test name="Iframe  Intro">
+
+
+        <classes>
+            <class name="test.java.selenium.iframes.IFrameIntro"></class>
+        </classes>
+
+    </test>
+
+
+</suite>

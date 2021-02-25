@@ -27,7 +27,7 @@ public class WindowsIntro {
     }
 
 @Test
-    public void test1() {
+    public void test1() throws InterruptedException {
 
         driver.get("https://google.com");
     WebElement searchBox = driver.findElement(By.name("q"));
@@ -59,7 +59,9 @@ public class WindowsIntro {
     // switch to a first window/browser
     driver.switchTo().window(currentWindowId);
 
-    WebElement wikiLink = driver.findElement(By.linkText("Java (programming language) - Wikipedia"));
+    Thread.sleep(2000);
+
+    WebElement wikiLink = driver.findElement(By.xpath("//span[.='Java (programming language) - Wikipedia']"));
 
     // open link in a new window
     actions.keyDown(Keys.SHIFT).click(wikiLink).keyUp(Keys.SHIFT).perform();
