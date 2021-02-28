@@ -1,11 +1,10 @@
-package test.java.selenium.syncrinization;
+package test.java.selenium.synchronization;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
@@ -49,7 +48,7 @@ public class ImplicitWaitIntro {
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
 
-        WebElement applyButton = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("ceko"));
+      //  WebElement applyButton = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("ceko"));
     }
 
 
@@ -57,6 +56,8 @@ public class ImplicitWaitIntro {
 
         WebDriverWait wait = new WebDriverWait(driver, 20);
         WebElement locatedElement = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+
+        return locatedElement;
 
     }
 }
