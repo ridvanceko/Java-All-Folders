@@ -1,14 +1,15 @@
 package test.java.selenium.utils;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Set;
 
 public class CommonUtils {
@@ -76,5 +77,17 @@ public class CommonUtils {
 
 
 
+    public static void takeAScreenshot(WebDriver driver, String screenshotName) {
+        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        try {
+            String destinationDir = "screenshot/";
+            FileUtils.copyFile(file, new File(destinationDir + screenshotName + System.currentTimeMillis()));
+
+        } catch (IOException ex) {
+            System.out.println("Failed to take a screenshot: " + ex.getStackTrace());
+        }
+
+
+    }
 
 }
