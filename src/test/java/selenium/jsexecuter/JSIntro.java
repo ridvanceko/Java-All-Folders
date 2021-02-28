@@ -1,6 +1,7 @@
 package test.java.selenium.jsexecuter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,4 +37,21 @@ public class JSIntro {
         JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("window.scrollBy(0, 600)");
     }
+
+    @Test
+    public void scrollTest2() {
+        driver.get("https://amazon.com");
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("window.scrollBy(0, document.body.scrollHeight)"); //scroll all the way down to page
+    }
+
+    @Test
+    public void scrollTest3() {
+        driver.get("https://amazon.com");
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        WebElement mustSeeDeals = driver.findElement(By.xpath("//h2[.='Must-see fashion deals']"));
+        js.executeScript("argument[0].scrollIntoView();", mustSeeDeals);
+    }
+
+
 }
